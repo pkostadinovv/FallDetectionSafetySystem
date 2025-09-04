@@ -1,4 +1,4 @@
-# Posture Classifier: Standing vs Lying
+# Fall Detection System/Posture Classifier: Standing vs Lying
 
 This system scans images and detects key joints in the human body by utilizing [MediaPipe](https://developers.google.com/mediapipe) – an open-source, cross-platform framework by Google. Then it applies geometric heuristics (torso angle and bounding box aspect ratio) to classify whether a person is **lying down** or **standing**. The system outputs both a **CSV report** and **annotated images** with bounding boxes and labels.
 
