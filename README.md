@@ -20,15 +20,21 @@ Input image → Annotated output:
 ## Requirements:
 
 Python 3.8+
+
 MediaPipe
+
 OpenCV
+
 NumPy
+
 Pandas
 
 ## Usage
 
 Place your test images in a folder, e.g. ./images/.
+
 Run the script:
+
 python posture_batch_classifier.py ./images --out annotated --csv results.csv
 
 ## Options
@@ -64,18 +70,29 @@ notes (e.g., angle+aspect agree)
 # How It Works
 
 Pose Estimation
+
 MediaPipe Pose detects 33 body landmarks from each image.
+
 Feature Extraction
+
 Computes torso angle (shoulder–hip line vs horizontal).
+
 Computes bounding box aspect ratio from visible landmarks.
-Classification
+
+## Classification
+
 If torso is nearly horizontal OR bbox is wide → label = lying.
+
 Otherwise → label = standing.
+
 Confidence is derived from how strongly the measurements match each posture.
 
 # Future Work
 
 Add sitting posture classification.
+
 Support multi-person detection.
+
 Replace heuristic rules with a trained machine learning classifier (SVM, neural net).
+
 Real-time webcam/video processing mode.
